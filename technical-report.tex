@@ -1,0 +1,82 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{etoolbox}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[width=15.00cm, height=23.00cm]{geometry}
+\usepackage{caption}
+\usepackage{biblatex} 
+\usepackage{hyperref}
+
+\addbibresource{bibliography.bib} 
+\graphicspath{{Images/}}
+\captionsetup{font = {it, small}, labelfont={color=NavyBlue, bf}}
+
+
+
+
+\begin{document}
+	
+	\pagenumbering{roman}
+	\thispagestyle{empty}
+	\begin{center}
+		\includegraphics[width=5cm]{logouni}
+		\vspace{2cm}
+		
+		{\Large Group project for the course of \\ \vspace{3mm}
+		\textbf{Mechanical Design for Mechatronics} \\ \vspace{1cm}
+		Prof.: Rustighi Emiliano} \vspace{1cm}
+	
+		\rule{5cm}{0.5pt} \\ \vspace{1cm}
+		{\Large Technical report} \\ \vspace{3mm}
+		{\LARGE \textbf{TITOLO}} \\ \vspace{1cm}
+		
+		\rule{5cm}{0.5pt} \vspace{1cm}
+		
+		\begin{multicols}{2}
+			Bontempelli Elia \\
+			Rizzardi Alessandro \\
+			Dalle Vedove Matteo \\
+			Zambotti Beatrice
+		\end{multicols}
+		\vspace{1cm}
+		
+		\today
+		
+	\end{center}
+	
+	\newpage
+	\tableofcontents
+	
+	\newpage
+	
+	\pagenumbering{arabic}
+	\setcounter{page}{1}
+	
+	% Importare qua le varie sezioni
+	\input{Parts/designspecification}
+	
+	
+	
+	
+	
+	
+	
+	\appendix	
+	\counterwithin{figure}{section}
+	\counterwithin{table}{section}
+	
+	
+	
+	% Inserire da qua le appendici
+	\newpage
+	\section{Appendix}
+	\newpage
+	\section{Bibliography and references}
+	\printbibliography[heading=none]
+\end{document}

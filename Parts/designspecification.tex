@@ -1,2 +1,52 @@
 \section{Product design specification}
-	\cite{cyberorto}
+	The goal of our project is to create our implementation of the \textit{CyberOrto} \cite{cyberorto} made by \textit{Mindshub}, an non-lucrative association based in Ala (Trentino). The goal of this robot is to automatically handle an amateur vegetable garden by performing this 3 principle actions:
+	\begin{enumerate}[i)]
+		\item planting the seeds  of the desired plant in a location decided by the user using a web interface;
+		\item constantly provide water to the vegetable;
+		\item extirpate undesired plants.
+	\end{enumerate}
+
+	By talking with the association that worked (and is still improving) on the product we acknowledged the following requirements (mainly related to the functionality of the product) that the structure has to satisfy:
+	\begin{enumerate}[i)]
+		\item the arm appendix must suits an interface that allows to have an interchangeable set of tools (like the one use to plow the terrain);
+		
+		\item the arm appendix should accommodate a small pipe in order to irrigate the vegetables; in particular this has to be connected to an external reservoir (with no dimension specified if it's position is fixed) or by using an internal reservoir on the moving structure of at least $4l$ (that can periodically be refilled) if it's not possible to directly attach the arm to the main reservoir;
+		
+		\item the minimum accepted working area of the robot is a rectangle of dimension $4m\times 3m$; the robot should be design keeping in mind the possibility to increase the working area by expanding it over one edge (for example having the possibility to work on a $8m\times 3m$ terrain);
+		
+		\item the structure can house the electronic control unit of the robot that's remotely connected to the server using wireless connection and by doing so should accommodate a battery the allows the robot to work for at least \textbf{number of hours of uninterrupted work}. The power consumption of the structure should be minimized if possible (at the actual state the prototype consumes $40W$ and has a \textbf{quantità batteria} weighting $6.3kg$);
+		
+		\item regarding the accuracy of the movement of the system the allowed backlash on the working point should always be less then $1cm$ with the control technique implemented and the goal is to have maximum $5mm$ of deviation from the nominal value;
+		
+		\item the structure should be mainly composed of standard components and should be as cheap as possible in order to make it affordable for everyone.
+	\end{enumerate}
+
+	\paragraph{Loads and operating conditions} The structure should be able to perform all it's operation while being safe and fully functional. For the design and the verification of the structure the loads related to wind can be neglected due to the presence of an anemometer that's mounted on the robot and ensures that the robot works only on a sufficiently safe environment.
+	
+	The heavier operation performed by the robot is the extirpation that's done by plowing the soil with a rotating element \textbf{AGGIUNGERE UNA BREVE DESCRIZIONE}. Considering the actual mounted motor to perform this operation the torque that has to be transmitted to the plower is of $T_\textrm{plower} = N\cdot m$ \textbf{CHIEDERE DATO}.
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

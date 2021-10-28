@@ -1,0 +1,32 @@
+\section{Latex Crash Course}
+	Così io scrivo normalmente e posso fare un testo; per andare a capo semplicemente posso fare così \\ come potete vedere
+	
+	Lasciando una riga vuota di codice ho creato un nuovo paragrafo. Se voglio scrivere un parametro matematico in linea di testo basta che faccio $f_l(x) = 10N$, mentre se voglio un'equazione bella centrata:
+	\begin{equation}
+		f_{x, max} (t) = \int_{-\infty}^{\frac \pi 2} e^{-t^2} \, dt
+	\end{equation}
+	Se invece non voglio avere il numero per l'equazione basta fare 
+	\[ f(x,y) = \cos(x) \sin(y) \]
+	
+	Adesso faccio un'equazione per usare i riferimenti:
+	\begin{equation} \label{eq:esempioequazione}
+		f(x) = e^x
+	\end{equation}
+	Quella appena scritta è l'equazione \ref{eq:esempioequazione} e si trova a pagina \pageref{eq:esempioequazione}.
+	
+	\paragraph{Elenchi puntati} Con questo comando posso creare un nuovo paragrafo con un certo titolo e farvi vedere come fare gli elenchi puntati:
+	\begin{itemize}
+		\item il primo punto;
+		\item il secondo punto
+	\end{itemize}
+	L'elenco numerato si fa invece scrivendo
+	\begin{enumerate}
+		\item il primo punto;
+		\item il secondo punto
+	\end{enumerate}
+	
+	Per scrivere in corsivo basta fare \textit{così, usando il comando "textit"} mentre \textbf{per il grassetto utilizzo "textbf"}. Volendo \textbf{\textit{posso anche usarli insieme}}.
+
+
+
+

@@ -9,16 +9,21 @@
 \usepackage{etoolbox}
 \usepackage[dvipsnames]{xcolor}
 \usepackage[width=15.00cm, height=23.00cm]{geometry}
-\usepackage{caption}
+\usepackage[margin=1cm]{caption}
 \usepackage{biblatex} 
 \usepackage{hyperref}
 \usepackage{enumerate}
+\usepackage{textcomp}
 
 
 \addbibresource{bibliography.bib} 
 \graphicspath{{Images/}}
 \captionsetup{font = {it, small}, labelfont={color=NavyBlue, bf}}
 
+%% Fonts
+\usepackage[osf,sc]{mathpazo}
+\usepackage[scaled=0.90]{helvet}
+\usepackage[scaled=0.85]{beramono}
 
 
 
@@ -83,6 +88,6 @@
 	\printbibliography[heading=none]
 	
 	\newpage
-	\input{LatexCrashCourse}
+	%\input{LatexCrashCourse}
 	
 \end{document}

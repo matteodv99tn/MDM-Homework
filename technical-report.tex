@@ -10,11 +10,12 @@
 \usepackage[dvipsnames]{xcolor}
 \usepackage[width=15.00cm, height=23.00cm]{geometry}
 \usepackage[margin=1cm]{caption}
-\usepackage{biblatex} 
+\usepackage[sorting=none]{biblatex} 
 \usepackage{hyperref}
 \usepackage{enumerate}
 \usepackage{textcomp}
-
+\usepackage{subcaption}
+\usepackage{sidecap}
 
 \addbibresource{bibliography.bib} 
 \graphicspath{{Images/}}
@@ -67,6 +68,7 @@
 	
 	% Importare qua le varie sezioni
 	\input{Parts/designspecification}
+	\input{Parts/preliminarydesign}
 	
 	
 	
@@ -83,8 +85,12 @@
 	% Inserire da qua le appendici
 	\newpage
 	\section{Appendix}
+	\counterwithin{table}{subsection}
+	\input{Appendix/material.tex}
+	
 	\newpage
 	\section{Bibliography and references}
+	In order of first appearance:
 	\printbibliography[heading=none]
 	
 	\newpage

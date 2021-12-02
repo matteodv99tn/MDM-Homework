@@ -5,7 +5,7 @@
 	\paragraph{Kinematic configurations} The first key operation that the robot has to perform is reaching a desired point on the working space and so, in planar kinematics, the machine should present two degrees of freedom that allow to reach all the possible positions; this can be done considering 3 main joint configuration that allows to perform such operations:
 	\begin{itemize}
 		\item double prismatic joints (figure \ref{fig:kinematiccoupling}.a) where two perpendicular linear guides can be used to move on the plane;
-		\item prismatic and revolute joint (figure \ref{fig:kinematiccoupling}.b) where the arm that's free to rotate it's mounted on top of a linear guide. This kind of kinematic chain is currently used by the MindsHub prototype;
+		\item prismatic and revolute joint (figure \ref{fig:kinematiccoupling}.b) where the arm that's free to rotate it's mounted on top of a linear guide. This kind of kinematic chain is currently used by the MindsHub concept;
 		\item double revolute joints (figure \ref{fig:kinematiccoupling}.c), typical configuration of a robot arm, that constraint the framing point to be fixed.
 	\end{itemize}
 	
@@ -29,9 +29,37 @@
 	
 	By a first analysis the third configuration (double revolute joint) isn't feasible for the project due to the fact that the system presents a fixed pivot point respect to the frame and to work more area it's mandatory to increase the length of the edges (and this is an issue for the \textit{extendibility} of the machine).
 	
+	\paragraph{Concept \#1} The first concept (figure \ref{fig:prot:1}) is realised with a double prismatic joint. In particular point $A$ and $A'$ relies on parallel tracks placed on the ground that can be extended in order to increase the cultivated area. The working arm can move along an elevated beam connecting the track (point $B$) and can move vertically to cultivate point $P$.
 	
+	\begin{figure}[bht]
+		\centering \includegraphics[width=8.5cm]{Prototype-1}
+		\caption{concept \#1 realised with double prismatic joint.}
+		\label{fig:prot:1}
+	\end{figure}
 	
+	This structure present a frame for the arm that's stable while operating due to it's arch structure; possible problem to this implementation is that long elevated beam (subjected to the loads of the arms and it's mass) can deflect and fail statically. Also, if possible, rotoidal coupling should be used (and for this we can refer to concept \#2).
+	
+	\paragraph{Concept \#2}	The second concept (figure \ref{fig:prot:2}) is similar to the first one but one prismatic joint is replaced with a revolute connection put in the middle of the elevated beam. The length of the edge $BP$ from a top view must be equal to half the length of the supporting bar in order to reach all points in the rectangular space.
 
+	\begin{figure}[bht]
+		\centering \includegraphics[width=8.3cm]{Prototype-2}
+		\caption{concept \#2 realised with a combination of both prismatic and revolute joint.}
+		\label{fig:prot:2}
+	\end{figure}
+	
+	This structure also presents the pro of concept \#1 of having a stable frame structure for the operating arm due to it's arch conformation and, as addition, uses a revolute joint to control the second degree of freedom of the arm. However this implementation increases the mechanical load on the elevated beam (increasing the torsion due to the higher arm of the actions on the tool tip respect to the elevated bar).
+	
+	\paragraph{Concept \#3}	The third concept (figure \ref{fig:prot:3}) is similar to \#2 but instead of using two parallel tracks, the prismatic joint uses only one of them.
+
+	\begin{SCfigure}[1.5][bht]
+		\centering \includegraphics[width=4.6cm]{Prototype-3}
+		\caption{concept \#3  realised with a combination of both prismatic and revolute joint.}
+		\label{fig:prot:3}
+	\end{SCfigure}
+
+	This implementation avoid the problem of high deflection of concepts \#1 and \#2 by removing the long elevated framing beam, but also increases the reactional momentum that the prismatic joint $A$ should bear in order to maintain stable the system.
+	
+	
 \input{Parts/materialselection}
 	
 	

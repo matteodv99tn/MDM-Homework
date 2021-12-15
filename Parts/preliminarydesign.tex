@@ -1,5 +1,4 @@
-\section{Concept generation and preliminary design}
-\subsection{Concept generation}
+\section{Concept generation}
 	With all the premise that lead the development of the project, the first thing that has to be done is generate the concept that can later be compared to choose the best design solution that can become a concrete realization of the ideas.
 	
 	\paragraph{Kinematic configurations} The first key operation that the robot has to perform is reaching a desired point on the working space and so, in planar kinematics, the machine should present two degrees of freedom that allow to reach all the possible positions; this can be done considering 3 main joint configuration that allows to perform such operations:
@@ -61,10 +60,22 @@
 	
 	
 \subsection{Decision matrix}
-
+	With a brief overview of the 3 main concept generated, the unbiased choice can be performed by constructing and evaluating the decision matrix (table \ref{tab:decitionmatrix}). The main objective evaluated are:
+	
 	\input{Table/decisionmatrix.tex}
 	
-	
+	\begin{itemize}
+		\item costs: based on the estimated material cost considering quantity and types of parts that can be used for the implementation;
+		\item reliability: expected mechanical  resistance of the structure subjected to nominal loads as well as unexpected external loads (such environment of customer that interact with the structure);
+		
+		\item lifetime: expected lifetime of the product based on fatigue considerations;
+		
+		\item adaptability: criteria that evaluates how easy is to modify geometrical parameters to meet specific custom requirement of the final customer based on asperity and tolerances of the terrain to cultivate;
+		
+		\item team experience: based on the overall design feasibility made by the team.
+	\end{itemize}
+
+	With the decision matrix completed the chosen concept is the first on which the motion is performed only by prismatic joints.
 	
 	
 \input{Parts/materialselection}

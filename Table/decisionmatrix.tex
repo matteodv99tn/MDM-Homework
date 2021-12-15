@@ -2,10 +2,11 @@
 \begin{sidewaystable}[p]
 	\rule{\linewidth}{2pt}
 	\caption{decision matrix.}
+	\label{tab:decitionmatrix}
 	\rule{\linewidth}{1pt} \vspace{0mm}	
 	
 	\begin{center}
-		\begin{tabular}{p{4cm} c c | c c c | c c c | c c c}
+		\begin{tabular}{p{3cm} c c | c c c | c c c | c c c}
 			\multicolumn{3}{c}{} & \multicolumn{3}{c}{Concept \#1} & \multicolumn{3}{c}{Concept \#2} & \multicolumn{3}{c}{Concept \#3} \\
 			Objective &  Weight & Parameter &
 			Mag & Score & Value &
@@ -17,29 +18,27 @@
 			low & 9 & 1.8 \\
 			
 			Reliability & 0.3 & experience &
-			high & 9 & 2.7 &
-			medium & 7 & 2.1 & 
-			very low & 4 & 1.2 \\
+			good & 8 & 2.4 &
+			okay & 6 & 1.8 & 
+			poor-fair & 3 & 0.9 \\
 			
-			Crit \#3 & w \#3 & par \#3 &
-			1a & 1b & 1c &
-			2a & 2b & 2c & 
-			3a & 3b & 3c \\
+			Lifetime & 0.15 & experience &
+			great & 10 & 1.5 &
+			good & 8 & 1.2 & 
+			fair & 4 & 0.6 \\
 			
-			Crit \#4 & w \#3 & par \#3 &
-			1a & 1b & 1c &
-			2a & 2b & 2c & 
-			3a & 3b & 3c \\
+			Adaptability & 0.2 & experience &
+			good & 8 & 1.6 &
+			okay-good & 7 & 1.4 & 
+			fair & 4 & 0.8 \\
 			
-			Crit \#5 & w \#5 & par \#5 &
-			1a & 1b & 1c &
-			2a & 2b & 2c & 
-			3a & 3b & 3c \\
-			
-			
+			Team experience & 0.15 & experience &
+			good & 8 & 1.2 &
+			great & 10 & 1.5 & 
+			fair & 4 & 0.6 \\			
 			
 			\hline
-			\multicolumn{3}{r|}{Overall score:} &&& 10 &&& 8 &&& 4
+			\multicolumn{3}{r|}{Overall score:} &&& \textbf{8.1} &&& 6.9 &&& 4.7
 		\end{tabular}
 	\end{center}
 	
@@ -47,7 +46,7 @@
 	\rule{\linewidth}{1pt}
 	{
 		\scriptsize
-		Other info
+		Qualitative score assignments:  poor = 2, fair = 4, okay = 6, good = 8, great = 10.
 	}	
 	
 	\rule{\linewidth}{2pt}

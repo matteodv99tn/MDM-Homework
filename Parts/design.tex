@@ -1,6 +1,11 @@
-\section{Design process}
-\subsection{Preliminary design}
-	Based on the selected concept the simplest body diagram has been created in order to start the dimensioning of the main elements of the structure. Considering the possible practical implementation of the system, the symbolic representation of the system has been made (\textbf{AGGIUNGERE LA FIGURA}).
+\section{Preliminary design}
+	Based on the selected concept the simplest body diagram has been created in order to start the dimensioning of the main elements of the structure. Considering the possible practical implementation of the system, the symbolic representation of the moving frame has been made (figure \ref{fig:freebodydiagramframe}).
+	
+	\begin{figure}[bht]
+		\centering \includegraphics{preliminary-a}
+		\caption{schematic representation of the moving frame supporting the arm; blue arrows are describes the rotational degree of freedom left by the joints. \textbf{FIGURA DA MODIFICARE}}
+		\label{fig:freebodydiagramframe}
+	\end{figure}
 	
 	The design involves a main elevated track (body 2) supported by two vertical supporting beams (body 1 and 3); the connection between body 1 and 2 has done by a full joint with 6 degrees of constrain while the connection of the track with the other support is done by a hinge that leaves free the rotation over the global $x$ axis. The two vertical supports can slide on two parallel tracks and the associated prismatic joints constraints 4 degrees of freedom each, leaving the system free to slide and accommodating rotation over the global $x$ axis. The choice of the joints is made in order to make the system immune to misalignment of the tracks (in particular considering their non-perfect parallelism and the fact that they can't be coplanar).
 	
@@ -10,7 +15,7 @@
 		
 		\item the vertical supports are equally dimensioned and present a characteristic height $H$; the elevated track connecting them has length $L$;
 		
-		\item referring to figure \textbf{RIFERIMENTO FIGURA}, the action associated to the joint in $B$ aren't described (the theoretical connection of bodies 1 and 2 should behave as a single element), however the practical final result will imply the connection of two separate beams.	
+		\item referring to figure \te, the action associated to the joint in $B$ aren't described (the theoretical connection of bodies 1 and 2 should behave as a single element), however the practical final result will imply the connection of two separate beams.	
 		
 	\end{itemize}
 
@@ -32,6 +37,8 @@
 	
 	\input{Table/beamchoice.tex}
 	
+	
+
 	
 	
 	

@@ -15,10 +15,23 @@
 		
 		\item the vertical supports are equally dimensioned and present a characteristic height $H$; the elevated track connecting them has length $L$;
 		
-		\item referring to figure \textbf{CREARE FIGURA E SCRIVERE RIFERIMENTO}, the action associated to the joint in $B$ aren't described (the theoretical connection of bodies 1 and 2 should behave as a single element), however the practical final result will imply the connection of two separate beams.	
+		\item figure \ref{fig:fbd-frames}\textit{(a)} shows the free body diagram of the structure and thus the set of external actions and reactions applied; figure \ref{fig:fbd-frames}\textit{(b)} reports instead the reference frames with respective origin with respect to which internal loads are calculated.
+		
+		The full joint in $B$ has not been described (as the connection preserves the continuity of the actions transmitted by the body), however the final design will imply the connection of two separate beams by means of a gusset.	
 		
 	\end{itemize}
-
+	
+	\begin{figure}[p]
+		\begin{subfigure}{\linewidth}			
+			\centering \includegraphics[width=15cm]{reactions} \caption{}
+		\end{subfigure}
+		\begin{subfigure}{\linewidth}			
+			\centering \includegraphics[width=15cm]{frames} \caption{}
+		\end{subfigure}
+		\caption{free body diagram (a) and reference frames (b) used for the description of the internal loads of the beam. In (a) the structure has been disassembled at the pivot point $C$ in order to describe the reaction forces transmitted.}
+		\label{fig:fbd-frames}
+	\end{figure}
+	
 	Chosen the two hyper-static variable $X_1,X_2$ to reduce the problem to an isostatic one the parametric definitions of the reaction forces are
 	\[ R_{Az} = \frac {L-\xi}L P \qquad M_{Ay} = -X_2 \qquad R_{Cz} = \frac \xi L P \qquad M_{Cy} = X_2 \] \[ M_{Cz} = T - X_1 \qquad R_{Dz} = \frac \xi L P \qquad M_{Dz} = T - X_1 \]
 	The other actions ($R_{Ay},R_{Cx}, R_{Cy}, R_{Dy}$) are instead identically null. To solve the hyper-static problem the Castigliano's theorem has been used, computing the elastic energy $U_e$ of the structure neglecting shear loads:

@@ -1,0 +1,9 @@
+\subsection{Fatigue verification}
+	\paragraph{Most critical section} As already stated, the most critical section is subjected to a maximum stress of $\sigma_{max} \simeq 28.68MPa$. While functioning we expect that the turret performing the operation to the soil periodically moves along the track: having $\zeta$ varying over time determines that also the internal loads are fluctuating and this might arise fatigue failure of the machine.
+	
+	Given the need of a fatigue verification, acknowledged that the minimum bending load at $z^*$ is $M_{x,min} \simeq 14.05N\cdot m$ achieved for $\zeta = 0m$, determining $\sigma_{min} \simeq 2.97MPa$; this further implies that the mean and amplitude stresses for fatigue verification are
+	\[ \sigma_m \simeq 15.82 MPa \qquad \sigma_a \simeq 12.85MPa \]
+	According to Soderberg criterion, the equivalent amplitude only stress component evaluates to
+	\[ \sigma_{a,eq} = \frac{\sigma_{ys} \sigma_a}{\sigma_{ys} - \sigma_m} \simeq 13.76MPa  \] 
+	In this case the load factor is $C_l=1$; given an equivalent diameter $d_{eq} = \sqrt{\frac 4\pi A} = 29mm$, the corresponding size factor is $C_d = 1.189d_{eq}^{-0.097} \simeq 0.86$; details concerning the surface finish of the T-slot beams are not enough to fully determine the surface coefficient $C_s$ that's assumed in this case to be $0.8$ as safety value. Considering an endurance limit of the 6061-T5 aluminium alloy of $\sigma_{lim} = 100MPa$ \cite{aluminium-endurance}, this means that the safety factor against fatigue failure is
+	\[ \phi_\textrm{fatigue} = C_sC_dC_l\frac{\sigma_{lim}}{\sigma_{a,eq}} \simeq 4.98 \]

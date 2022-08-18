@@ -1,0 +1,12 @@
+\subsection{Static verification}
+	With all the geometrical values known, it has been possible to carry out a more detailed analysis. Considering a more complex model of the forces that takes into account also the distributed load due to the gravity and that the force $F$ is applied with an eccentricity $e=5cm$, it has been possible to parametrically define the hyperstatic variables as
+	\[ X_1 \simeq \big( 0.63-0.16\zeta\big) N\cdot m \qquad X_2 \simeq -8.10 \ N\cdot m \] \[ X_3 \simeq \big( - 10.54 - 11.07\zeta + 55.53\zeta^2 - 6.17\zeta^3 \big) N\cdot m \]
+	Evaluating the stress state on the 3 beams making up the structure for values of $\zeta \in [0,L]$, what we obtained is that the most critical section is in the elevated track for $\zeta^* = 1.65m$ at $z^* = 1.65m$ where the maximum bending value $M_x^* \simeq 135.64N\cdot m$ is achieved. Knowing that $N^* = 0$ and neglecting the shear stress contribution due to both shear $V_y^* \simeq 111N$ and torque $M_z^* \simeq 1.89N\cdot m$, the stress state is
+	\[ \sigma_{zz}(y) = \frac{M_x^*}{I_{xx,track}}y \qquad \Rightarrow \qquad \sigma_{zz,max} = \sigma_{zz}(2cm) \simeq 28.68 MPa   \]
+	This leads to a safety factor of $\phi = \sigma_{ys}/\sigma_{zz,max} \simeq 8.37$, meaning that the structure is statically verified. As already stated in the preliminary analysis, this safety factor is quite high and to optimize material usage, a design reducing it's value is recommended but we think that for our use case is still ok, as we made a lot of assumptions to simplify the analysis, in particular:
+	\begin{itemize}
+		\item due to the lack of analytical formulas for such complex geometry section, shear components due to torque cannot be computed;
+		\item we did not consider external forces acting on the global $x$ axis due to the actuation of the machine or accidental load applied by the end user.
+	\end{itemize}
+
+	\textbf{MAGARI AGGIUNGERE GRAFICI DEL MOMENTO IN FUNZIONE DI 2/3 VALORI DI $\zeta$}

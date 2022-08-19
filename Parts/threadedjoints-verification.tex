@@ -4,7 +4,7 @@ Given the customer's requirements, the threaded fasteners used for the threaded 
 
 Considering the threaded joints present on the robot, the maximum thickness of the members is given by the sum between the beam cross section's width, $40 mm$, and the machined gussets thickness, $8 mm$. Given that two screws must fit, as in section $A$, the length of the screws is chosen to be equal to $18 mm$, according to \texttt{UNI ISO 888}; table \ref{tab:boltchoise} reports main properties of the chosen bolt used for the verification of the connections.
 
-\begin{table}[bt]
+\begin{table}[h!]
 	\rule{\linewidth}{2pt}
 	\caption{selected bolt chosen from the Parker IPS catalogue \cite{parker-ds} and related main properties.}
 	\label{tab:boltchoise}
@@ -25,7 +25,6 @@ Considering the threaded joints present on the robot, the maximum thickness of t
 \end{table}
 
 With reference to Figure \ref{fig:freebodydiagramframe}, threaded joints are present in sections $A$, $B$, $C$ and $D$. The verifications are carried out with respect to the most critical sections which, according to the load analysis performed previously, are identified as section $A$ and $D$. Moreover, since the load distribution depends on the position of the point of application of the external load, the most critical condition corresponds to the one in which the load is applied in $\zeta = 1$ for section $A$ and $\zeta = 3$ for section $D$.\\
-%volevo fare subsubsection per le sezioni A e D
 \subsubsection*{Section A}
 The loads applied on section $A$ are the following:\\
 \begin{itemize}
@@ -50,7 +49,7 @@ Given the geometry of the component, the threaded joints are positioned on the v
 where $r_{i}$ are the distances of every screw from the center of the section O, and are equal to $r_{1} = 40 mm$, $r_{2} = 80 mm$. 
 The shear force is calculated for the most critical screws, distant $r_{2}$ from O, and it is equal to:\\
 \begin{equation*}
-    V_{2} = \frac{M_{zA}r_{2}}{2r^2_{1}+2r^2_{2}} = -0.003 N
+    V_{2} = \frac{M_{zA}r_{2}}{2r^2_{1}+2r^2_{2}} = - 2.970 N
 \end{equation*}
 The shear and punching resistance verifications can be performed as follow:
 \begin{itemize}
@@ -61,15 +60,15 @@ The shear and punching resistance verifications can be performed as follow:
     where $\sigma_{uts}$ corresponds to the screw's ultimate tensile strength, $A_{b}$ to the bolt cross-section and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.58}$.
     As a consequence, it follows that:
     \begin{equation*}
-       \sigma_{uts} > \frac{|V_{2}|\phi}{A_{b}} = 0.127 \cdot 10^{-3} MPa.
+       \sigma_{uts} > \frac{|V_{2}|\phi}{A_{b}} = 0.127 MPa.
     \end{equation*}\\
     \item crushing resistance verification:
     \begin{equation*}
         |V_{2}| < \frac{\sigma_{uts,m}dt}{\phi}
     \end{equation*}
-    where $\sigma_{uts,m}$ corresponds to the member's ultimate tensile strength, $d$ to the bolt diameter and $\phi$ is the safety factor which, according to Eurocode3, is equal to 0.5. Finally, $t$ corresponds to the member's thickness, which can be calculated as the sum of the machined gussets thickness, $F = 8 mm$, and the member's cross section, equal to $40 mm$.
+    where $\sigma_{uts,m}$ corresponds to the member's ultimate tensile strength, $d$ to the bolt diameter and $\phi$ is the safety factor which, according to Eurocode3, is equal to 0.5. Finally, $t$ corresponds to the member's thickness, which can be calculated as the sum of the machined gusset thickness, $F = 8 mm$, and the base's thickness, equal to $16 mm$:
      \begin{equation*}
-       \sigma_{uts,m} > \frac{|V_{2}|\phi}{dt} = 3.314 \cdot 10^{-6} MPa.
+       \sigma_{uts,m} > \frac{|V_{2}|\phi}{dt} = 7.734 \cdot 10^{-3} MPa.
     \end{equation*}
 \end{itemize}
 
@@ -90,18 +89,55 @@ Considering the $xz$ plane and assuming the pivot is placed on the edge of the s
 \end{equation*}
 The normal load is calculated for the most critical screw as follow:\\
 \begin{equation*}
-    N_{xz} = \frac{M_{yA}h_{4}}{h_{1}^{2}+h_{2}^{2}+h_{3}^{2}+h_{4}^{2}} + \frac{N_{1}}{n_{b}} = -62.775 N
+    N_{xz} = \frac{M_{yA}h_{4}}{h_{1}^{2}+h_{2}^{2}+h_{3}^{2}+h_{4}^{2}} + \frac{N_{1}}{n_{b}} = - 56.530 N
 \end{equation*}
 Since the axial load acting on every bolt is negative, i.e. the bolt are subjected to compression, there are no issues relative to tension and punching resistance. As a consequence, it is not necessary to perform those verifications. \textbf{(???)}
 
 Considering the $yz$ plane and assuming that the pivot is placed on the edge of the section, the constants $h_{i}$ will be all equal to $\frac{C}{2} = 17 mm$.
 The normal load is equal to:
 \begin{equation*}
-    N_{yz} = \frac{M_{xA}h_{4}}{h_{1}^{2}+h_{2}^{2}+h_{3}^{2}+h_{4}^{2}} + \frac{N_{1}}{n_{b}} = -62.596 N
+    N_{yz} = \frac{M_{xA}h_{4}}{h_{1}^{2}+h_{2}^{2}+h_{3}^{2}+h_{4}^{2}} + \frac{N_{1}}{n_{b}} = 123.175 N
 \end{equation*}
-Even in this case the axial load in of compression and the verifications do not have to be performed. 
+The tension resistance and punching verification can be performed as follow:
+\begin{itemize}
+    \item tension resistance verification:
+    \begin{equation*}
+        N_{xz} < \frac{\sigma_{uts}A_{bt}}{\phi}
+    \end{equation*}
+    Where $\sigma_{uts}$ corresponds to the screw's ultimate tensile strength, $A_{bt}$ to the bolt tensile cross-section and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.9}$. As a consequence, it follows that:
+    \begin{equation*}
+       \sigma_{uts} > \frac{N_{xz}\phi}{A_{bt}} = 4.674MPa.
+    \end{equation*}
+    \item punching resistance verification:
+    \begin{equation*}
+        N_{xz} < \frac{\pi d_{0} t \sigma_{uts,m}}{\phi}
+    \end{equation*}
+    Where $\sigma_{uts,m}$ corresponds to the member's ultimate tensile strength, $d_{0}$ the bolt head diameter and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.6}$. Finally, $t$ corresponds to the member's thickness, which can be calculated as the sum of the gusset's thickness, $F = 8 mm$, and the base's thickness, equal to $16 mm$:
+     \begin{equation*}
+       \sigma_{uts,m} > \frac{N_{xz}\phi}{\pi d_{0}t} = 0.243 MPa.
+    \end{equation*}
+\end{itemize}
 
-\paragraph{Threaded joints along the $z$ axis} Similarly to the x axis, the axial loads are of compression. The calculations are not reported for the purpose of brevity.
+\paragraph{Threaded joints along the $z$ axis} In this case the sliding actions are givenc by M$_{xA}$ which produces a shear force on every screw equal to:\\
+\begin{equation*}
+    V_{i} = \frac{M_{xA}r_{i}}{\sum\limits_{i=1}^{n_{{b}}} r^2_{i}}
+\end{equation*}
+where $r_{i}$ are the distances of every screw from the center of the section O, and are equal to r = $\frac{E}{2} = 20 mm$.
+\begin{equation*}
+    V = \frac{M_{xA}r}{2r^2} = 14.849 N
+\end{equation*}
+\begin{itemize}
+    \item shear resistance verification:
+    \begin{equation*}
+       \sigma_{uts} > \frac{V\phi}{A_{b}} = 0.637 MPa.
+    \end{equation*}\\
+    \item crushing resistance verification:
+     \begin{equation*}
+       \sigma_{uts,m} > \frac{V\phi}{dt} = 3.867 \cdot 10^{-3} MPa.
+    \end{equation*}
+\end{itemize}
+
+The separating actions, N$_{A}$, M$_{yA}$ and M$_{zA}$, generates axial loads of compression ands, similarly to the x axis case, the verifications are not needed. The calculations are not reported for the purpose of brevity.
 
 \subsubsection*{Section D}
 The loads applied on section $D$ are the following:
@@ -135,7 +171,7 @@ Separating actions are given by the axial load and the bending moments. Assuming
 \end{equation*}\\
 where $h_{i}$ is the distance of the $i$-th bolt from the pivot point.
 \begin{equation*}
-    N_{xz} = \frac{M_{yD}}{h} + N_{D} = 233.415 N
+    N_{xz} = \frac{M_{yD}}{h} + N_{D} = 638.328 N
 \end{equation*}
 
 Considering the $xz$ plane and assuming the pivot on the edge of the section, $h$ is equal to $\frac{A}{2} = 20 mm$. The tension resistance and punching verification can be performed as follow:
@@ -146,7 +182,7 @@ Considering the $xz$ plane and assuming the pivot on the edge of the section, $h
     \end{equation*}
     Where $\sigma_{uts}$ corresponds to the screw's ultimate tensile strength, $A_{bt}$ to the bolt tensile cross-section and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.9}$. As a consequence, it follows that:
     \begin{equation*}
-       \sigma_{uts} > \frac{N_{xz}\phi}{A_{bt}} = 8.858 MPa.
+       \sigma_{uts} > \frac{N_{xz}\phi}{A_{bt}} = 24.223 MPa.
     \end{equation*}
     \item punching resistance verification:
     \begin{equation*}
@@ -154,15 +190,9 @@ Considering the $xz$ plane and assuming the pivot on the edge of the section, $h
     \end{equation*}
     Where $\sigma_{uts,m}$ corresponds to the member's ultimate tensile strength, $d_{0}$ the bolt head diameter and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.6}$. Finally, $t$ corresponds to the member's thickness, which can be calculated as the sum of the pivot joint thickness, $C = 9 mm$, and the member's cross section, equal to $40 mm$:
      \begin{equation*}
-       \sigma_{uts,m} > \frac{N_{xz}\phi}{\pi d_{0}t} = 0.226 MPa.
+       \sigma_{uts,m} > \frac{N_{xz}\phi}{\pi d_{0}t} = 0.617 MPa.
     \end{equation*}
 \end{itemize}
-%\begin{figure}[h!]
-%    \centering
-%    \includegraphics[width=5cm]{yz.png}
-%    \caption{}
-%    \label{fig:yz}
-%\end{figure}
 Considering instead the $xz$ plane we have:\\
 \begin{equation*}
     N_{yz} = \frac{M_{xD}}{h} + N_{D} = 233.010 N
@@ -175,10 +205,10 @@ thus:
     \end{equation*}
     \item punching resistance verification\\
     \begin{equation*}
-        N_{yz} < \frac{\pi d_{0} t \sigma_{uts,m}}{\phi} \qquad \Rightarrow \qquad   \sigma_{uts,m} > \frac{N_{yz}\phi}{\pi d_{0}t} = 0.246 MPa.
+        N_{yz} < \frac{\pi d_{0} t \sigma_{uts,m}}{\phi} \qquad \Rightarrow \qquad   \sigma_{uts,m} > \frac{N_{yz}\phi}{\pi d_{0}t} = 0.225 MPa.
     \end{equation*}
 \end{itemize}
-In conclusion, the bolt ultimate strength must be greater than $8.858 MPa$, a value that allows to choose any bolt property class. In order to minimize the costs, property 4.6 is chosen.\textbf{(????)} 
+In conclusion, the bolt ultimate strength must be greater than $24.223 MPa$, a value that allows to choose any bolt property class. In order to minimize the costs, property 4.6 is chosen.\textbf{(????)} 
 
 Moreover, the verifications for crushing and punching provide the minimum member ultimate strength, $\sigma_{uts,m} > 0.226 MPa$, value much smaller than the chosen member's UTS.
 

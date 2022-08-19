@@ -2,7 +2,7 @@
 \subsubsection*{Preliminary design}
 Given the customer's requirements, the threaded fasteners used for the threaded joints in the whole robot are chosen to be standard screws with diameter of $8mm$, compatible with the $40mm$ T-slot profiles.
 
-Considering the threaded joints present on the robot, the maximum thickness of the members is given by the sum between the beam cross section's width, $40 mm$, and the machined gussets thickness, $8 mm$. Given that two screws must fit, as in section $A$, the length of the screws is chosen to be equal to $18 mm$, according to \texttt{UNI ISO 888}; table \ref{tab:boltchoise} reports main properties of the chosen bolt used for the verification of the connections.
+Considering the threaded joints present on the robot, the maximum thickness of the members is given by the sum between the beam cross section's width, $40 mm$, and the machined gussets thickness, $8 mm$. Given that two screws must fit, as in section $A$, the length of the screws is chosen to be equal to $18 mm$, according to \texttt{UNI ISO 888}; table \ref{tab:boltchoise} reports the main properties of the chosen bolt used for the verification of the connections.
 
 \begin{table}[h!]
 	\rule{\linewidth}{2pt}
@@ -71,14 +71,13 @@ The shear and punching resistance verifications can be performed as follow:
        \sigma_{uts,m} > \frac{|V_{2}|\phi}{dt} = 7.734 \cdot 10^{-3} MPa.
     \end{equation*}
 \end{itemize}
-
 Separating actions are given by the axial load and the bending moments.\\
 Assuming that the members are rigid it is possible to calculate the effects of the separating actions in both $xz$ and $yz$ planes.\\
 The load caused by the separating action, acting on each bolt can be calculated as:\\
 \begin{equation*}
     N_{i} = \frac{M_{b}h_{i}}{\sum\limits_{i=1}^{n_{b}} h^2_{i}} + \frac{N}{n_{b}}
 \end{equation*}
-Considering the $xz$ plane and assuming the pivot is placed on the edge of the section, the constant h$_{i}$ will be equal to:
+Considering the $xz$ plane and assuming that the pivot is placed on the edge of the section, the constant h$_{i}$ will be equal to:
 \begin{equation*}
    \begin{cases}
     h_{1} = 16.962 mm\\
@@ -93,52 +92,82 @@ The normal load is calculated for the most critical screw as follow:\\
 \end{equation*}
 Since the axial load acting on every bolt is negative, i.e. the bolt are subjected to compression, there are no issues relative to tension and punching resistance. As a consequence, it is not necessary to perform those verifications. \textbf{(???)}
 
-Considering the $yz$ plane and assuming that the pivot is placed on the edge of the section, the constants $h_{i}$ will be all equal to $\frac{C}{2} = 17 mm$.
+Considering the $yz$ plane and assuming that the pivot is placed on the edge of the section, the constants $h_{i}$ will be all equal to $h = \frac{C}{2} = 17 mm$.
 The normal load is equal to:
 \begin{equation*}
-    N_{yz} = \frac{M_{xA}h_{4}}{h_{1}^{2}+h_{2}^{2}+h_{3}^{2}+h_{4}^{2}} + \frac{N_{1}}{n_{b}} = 123.175 N
+    N_{yz} = \frac{M_{xA}h}{4h^{2}} + \frac{N_{1}}{n_{b}} = 123.175 N
 \end{equation*}
 The tension resistance and punching verification can be performed as follow:
 \begin{itemize}
     \item tension resistance verification:
     \begin{equation*}
-        N_{xz} < \frac{\sigma_{uts}A_{bt}}{\phi}
+        N_{yz} < \frac{\sigma_{uts}A_{bt}}{\phi}
     \end{equation*}
     Where $\sigma_{uts}$ corresponds to the screw's ultimate tensile strength, $A_{bt}$ to the bolt tensile cross-section and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.9}$. As a consequence, it follows that:
     \begin{equation*}
-       \sigma_{uts} > \frac{N_{xz}\phi}{A_{bt}} = 4.674MPa.
+       \sigma_{uts} > \frac{N_{yz}\phi}{A_{bt}} = 4.674MPa.
     \end{equation*}
     \item punching resistance verification:
     \begin{equation*}
-        N_{xz} < \frac{\pi d_{0} t \sigma_{uts,m}}{\phi}
+        N_{yz} < \frac{\pi d_{0} t \sigma_{uts,m}}{\phi}
     \end{equation*}
     Where $\sigma_{uts,m}$ corresponds to the member's ultimate tensile strength, $d_{0}$ the bolt head diameter and $\phi$ is the safety factor which, according to Eurocode3, is equal to $\frac{1.25}{0.6}$. Finally, $t$ corresponds to the member's thickness, which can be calculated as the sum of the gusset's thickness, $F = 8 mm$, and the base's thickness, equal to $16 mm$:
      \begin{equation*}
-       \sigma_{uts,m} > \frac{N_{xz}\phi}{\pi d_{0}t} = 0.243 MPa.
+       \sigma_{uts,m} > \frac{N_{yz}\phi}{\pi d_{0}t} = 0.243 MPa.
     \end{equation*}
 \end{itemize}
 
-\paragraph{Threaded joints along the $z$ axis} In this case the sliding actions are givenc by M$_{xA}$ which produces a shear force on every screw equal to:\\
+\paragraph{Threaded joints along the $z$ axis} In this case the sliding actions are givenc by M$_{xA}$ and  N$_{A}$ which produce a shear force on every screw equal to:\\
 \begin{equation*}
-    V_{i} = \frac{M_{xA}r_{i}}{\sum\limits_{i=1}^{n_{{b}}} r^2_{i}}
+    V_{i} = \frac{M_{xA}r_{i}}{\sum\limits_{i=1}^{n_{{b}}} r^2_{i}} + \frac{N_{A}}{n_{b}}
 \end{equation*}
-where $r_{i}$ are the distances of every screw from the center of the section O, and are equal to r = $\frac{E}{2} = 20 mm$.
+where $r_{i}$ are the distances of every screw from the center of the section O, and are equal to r = $\frac{E}{2} = 20 mm$. 
 \begin{equation*}
-    V = \frac{M_{xA}r}{2r^2} = 14.849 N
+    V = \frac{M_{xA}r}{2r^2} +  \frac{N_{A}}{2} = 140.412 N
 \end{equation*}
 \begin{itemize}
     \item shear resistance verification:
     \begin{equation*}
-       \sigma_{uts} > \frac{V\phi}{A_{b}} = 0.637 MPa.
+       \sigma_{uts} > \frac{V\phi}{A_{b}} = 6.020 MPa.
     \end{equation*}\\
     \item crushing resistance verification:
      \begin{equation*}
-       \sigma_{uts,m} > \frac{V\phi}{dt} = 3.867 \cdot 10^{-3} MPa.
+       \sigma_{uts,m} > \frac{V\phi}{dt} = 0.183 MPa.
     \end{equation*}
 \end{itemize}
-
-The separating actions, N$_{A}$, M$_{yA}$ and M$_{zA}$, generates axial loads of compression ands, similarly to the x axis case, the verifications are not needed. The calculations are not reported for the purpose of brevity.
-
+The separating actions, M$_{yA}$ and M$_{zA}$ generates normal load on each and the effects are studies as previously for yz and xy plane.
+\begin{equation*}
+    N_{i} = \frac{M_{b}h_{i}}{\sum\limits_{i=1}^{n_{b}} h^2_{i}} + \frac{N}{n_{b}}
+\end{equation*}
+Considering the $yz$ plane and assuming that the pivot is placed on the edge of the section, the constants $h_{i}$ will be equal to $h_1 = D = 20 mm$ and $h_2 = D + E = 60 mm$.
+The normal load is evaluated for the most critical screw and is equal to:
+\begin{equation*}
+    N_{xz} = \frac{M_{yA}h_{2}}{h_{1}^{2}+h_{1}^{2}} = 28.404 N
+\end{equation*}
+\begin{itemize}
+    \item tension resistance verification:
+     \begin{equation*}
+       \sigma_{uts} > \frac{N_{yz}\phi}{A_{bt}} = 1.078 MPa.
+    \end{equation*}
+    \item punching resistance verification:
+     \begin{equation*}
+       \sigma_{uts,m} > \frac{N_{yz}\phi}{\pi d_{0}t} = 27.459 \cdot 10^{-3} MPa.
+    \end{equation*}
+\end{itemize}
+Finally, considering the xy plane, assuming that the pivot is placed on the edge of the section, the constants $h_{i}$ will be all equal to $h = \frac{C}{2} = 17 mm$ the normal load is equal to: \\
+\begin{equation*}
+    N_{xy} = \frac{M_{zA}h}{2h^{2}} = 17.470 N
+\end{equation*}
+\begin{itemize}
+    \item tension resistance verification:
+     \begin{equation*}
+       \sigma_{uts} > \frac{N_{xy}\phi}{A_{bt}} = 0.663 MPa.
+    \end{equation*}
+    \item punching resistance verification:
+     \begin{equation*}
+       \sigma_{uts,m} > \frac{N_{xy}\phi}{\pi d_{0}t} = 16.888 \cdot 10^{-3} MPa.
+    \end{equation*}
+\end{itemize}
 \subsubsection*{Section D}
 The loads applied on section $D$ are the following:
 \begin{itemize}
@@ -148,7 +177,7 @@ The loads applied on section $D$ are the following:
 	\item torque $M_{zD}x = -0.594 N\cdot m$.
 \end{itemize}
 In correspondence of section $D$, there is a pivot joint chosen from the Parker IPS catalogue \cite{parker-ds}, reported in figure \ref{fig:pivot}.
-\begin{figure}[bt]
+\begin{figure}[h!]
     \centering
     \begin{subfigure}{0.32\linewidth}
     	\centering \includegraphics[width=4cm]{pivotjoint.jpg} \caption{}

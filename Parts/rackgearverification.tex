@@ -1,4 +1,4 @@
-\subsection{Static verification rack and gear}
+\subsection{Design and static verification of rack and gear}
 The verification continued with the parts responsible for actuating the machine, rack that is positioned on both tracks and gear attached on the motors' shaft.
 We focused on two important aspects, interference and tooth root bending resistance.
 
@@ -21,47 +21,32 @@ In our case we designed the profile with a pressure $\alpha = 20^\circ$, thus we
 \begin{equation*}
 	z_{min} = 17,
 \end{equation*}
-that means that the interfence condition, in our project, is fulfilled because we designed a pinion with $z=18$.
 
-\subsubsection*{Tooth root fatigue resistance}
-One of the most important problem in the usage of gears is the teeth fatigue resistance, due to the fact they're subjected to pulsating loads.
-
-In our analysis we used the Lewis method that consider the tooth as a cantilever beam and shear and compressive normal stresses are neglected.
-In order to compute the stress state we used the following equation:
-\begin{equation}
-	\centering
-	\sigma_L=\frac{6F_th}{bs_L^2},
-	\label{stress}
-\end{equation}
-where $F_t$, $h$, $b$ and $s_L$ are showed in figure \ref{fig:tooth}.
-\begin{figure}[bt]
-\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[scale=0.5]{Images/toothgear1.png}
-	\caption{}
-\end{subfigure}%
-\begin{subfigure}{.5\textwidth}
-	\centering
-	\includegraphics[scale=0.6]{Images/toothgear2.png}
-	\caption{}
-\end{subfigure}
-\caption{tooth details: section (a) and face width (b).}
-\label{fig:tooth}
-\end{figure}
-For our project we considered that actuation is performed by means of two motors with a nominal power $P=10W$ rotating at $\omega=50rpm$ that are attached at the prismatic joints at both ends $A$ and $D$; given the maximum torque expressed by the motor as
-\begin{equation*}
-	T = \frac{P}{\omega} = 1.9 N\cdot m 
-\end{equation*}
-the actual force $F_t$ exerted on the teeth depends on the radius $r = 17.14mm$ of the gear as
-\begin{equation*}
-	\centering
-	F_t = \frac{T}{r} = 111.3 N
-\end{equation*}
-At this point we can find the stress state, from \eqref{stress}:
-\begin{equation}
-	\centering
-	\sigma_L=\frac{6\cdot 111.3\cdot 2.14}{10\cdot 1.79^2} = 44.6 MPa
-	\label{stressdata}
-\end{equation}\\
-The Lewis method provide the nominal stress state at the base of the tooth, in the hypothesis of considering the tooth as a cantilever beam.\\
-All factors affecting the actual value of the stress state should therefore be taken into account in the design. Moreover, the admissible stress must be defined starting from the properties of the material and the production and processing techniques adopted.\\
+\subsubsection*{Gear design and verification}
+	The gear attached to the motor's shaft is designed choosing as number of tooth $z=18$; assuming that the motors actuating the machines can generate a power $P=10W$ at $n = 50rpm$, the associated maximum generated torque is $T=1.9N\cdot m$. Choosing as module $m$ of the gear the value $2mm$, then the nominal diameter of the gear is $d = zm = 36mm$ and the maximum force that can be transmitted by the gear is
+	\[ F = \frac T r = 2 \frac T d = 106N\]
+	
+	\paragraph{Tooth root fatigue resistance}	One of the most important problem in the usage of gears is the teeth fatigue resistance, due to the fact they're subjected to pulsating loads.  
+	In our analysis we used the Lewis method that consider the tooth as a cantilever beam and shear and compressive normal stresses are neglected.
+	
+	According to such theory, the stress state acting on the tooth is
+	\[ \sigma = \frac{F}{mb Y_l}\]
+	where $b$ is the face width (figure \ref{fig:tooth}) and $Y_l$ is the Lewis factor taking into account for the shape of the tooth; such parameter depends on both the number of teeth $z$ and the pressure angle $\alpha$, and for the given data it evaluates to $Y_l = 0.308$.
+	\begin{figure}[bt]
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.5]{Images/toothgear1.png}
+		\caption{}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[scale=0.6]{Images/toothgear2.png}
+		\caption{}
+	\end{subfigure}
+	\caption{tooth details: section (a) and face width (b).}
+	\label{fig:tooth}
+	\end{figure}
+	
+	Given the ultimate tensile strength $\sigma_{uts} = 40MPa$ of plastic materials used in 3D printing machine and choosing a safety factor $\phi= 2$, reversing the Lewis equation gives us the minimum face width:
+	\[ \sigma \leq \frac{\sigma_{uts}}{\phi} \qquad \Rightarrow \qquad b \geq \frac{F \phi}{Y_l m \sigma_{uts}} = 8.61mm \]
+	thus a width $b = 10mm$ for the teeth has been chosen.

@@ -51,8 +51,15 @@ In our case we designed the profile with a pressure $\alpha = 20^\circ$, thus we
 	\[ \sigma \leq \frac{\sigma_{uts}}{\phi} \qquad \Rightarrow \qquad b \geq \frac{F \phi}{Y_l m \sigma_{uts}} = 8.61mm \]
 	thus a width $b = 10mm$ for the teeth has been chosen.
 	
-	\paragraph{Crushing verification} The gear is mounted to the motors shaft by means of a \textit{built-in} parallel key; the shaft is made of steel with high mechanical properties, while the gear, that can be 3D-printed, has lower stress capability, thus we need to verify the connection at crushing.
+	\paragraph{Crushing verification} The gear is mounted to the motors shaft by means of a $3\times 3mm$ parallel key; the shaft is made of steel with high mechanical properties, while the gear, that can be 3D-printed, has lower stress capability, thus we need to verify the member at crushing.
 	
-	By the geometry of the gear reported in the annexes, the contact surface that is used to exchange the load is a rectangular surface of dimensions $b\times h = 10 mm \times 1.292mm$; given the force $F$ that has to be exchanged, the mean pressure at the contact surface is
-	\[ p = \frac{F}{bh} = 8.21MPa \]
-	Considering the allowable pressure $p_{all} = \sigma_{uts} = 40MPa$, then the safety factor against crushing of the gear is $\phi = 4.87$.
+	By the geometry of the gear reported in the annexes, the contact surface that is used to exchange the load is a rectangular surface of dimensions $b\times h = 10 mm \times 1.292mm$; given the augmented force $F = 447N$ (as the radius where the force is applied is reduced to $r = 4.25mm$) that has to be exchanged, the mean pressure at the contact surface is
+	\[ p = \frac{F}{bh} = 34.62MPa \]
+	Considering the allowable pressure $p_{all} = \sigma_{uts} = 40MPa$, then the safety factor against crushing of the gear is $\phi = 1.15$.
+	
+	\paragraph{Gear and rack design} With this calculation performed, using built-in tools provided by the software and simple sketches a custom design for both gear and rack has been developed in order to be 3D printed by the end user. Annex \ref{draw:gearrack} (page \pageref{draw:gearrack}) reports the technical drawing of both parts.
+	
+	Moreover exploiting the parametric capability of \texttt{AutoDesk Inventor} the rack length is fully modular and can be extended/reduced by a integer amount of teeth in order to match the 3D printer plate dimensions; in the drawing it has been considered a rack with $z = 60$ teeth giving an overall length $l = 378mm$. 
+	
+	
+	

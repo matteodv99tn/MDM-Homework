@@ -180,9 +180,9 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="1.38"
-     inkscape:cx="251.44928"
-     inkscape:cy="117.02899"
+     inkscape:zoom="1.9516147"
+     inkscape:cx="156.79324"
+     inkscape:cy="89.925536"
      inkscape:window-width="1920"
      inkscape:window-height="991"
      inkscape:window-x="-9"
@@ -319,12 +319,12 @@
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#0077be;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend-6-0)"
-     d="M 202.08362,82.004699 163.58724,104.01557"
+     d="m 201.79914,82.036637 38.31017,22.333413"
      id="path11999-5-2"
      sodipodi:nodetypes="cc" />
   <path
      style="fill:none;stroke:#0077be;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow2Lend-0-7-5)"
-     d="M 193.06545,87.117424 154.56907,109.1283"
+     d="m 210.73598,87.290239 38.31017,22.333401"
      id="path11999-8-2-4"
      sodipodi:nodetypes="cc" />
   <polyline
@@ -403,7 +403,7 @@
        sodipodi:role="line"
        id="tspan6183"
        x="114.49274"
-       y="56.15942"></tspan></text>
+       y="56.15942" /></text>
   <text
      xml:space="preserve"
      style="font-size:12px;line-height:1.25;font-family:Arial;-inkscape-font-specification:Arial"

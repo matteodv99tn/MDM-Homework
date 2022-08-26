@@ -2,7 +2,7 @@
 \begin{table}[p]
 	\subsection{Bill of Materials}
 	\rule{\linewidth}{2pt}
-	\caption{bill of material and estimated costs.}
+	\caption{bill of material.}
 	\label{tab:BOM}
 	\rule{\linewidth}{1pt} \vspace{0mm}	
 	
@@ -23,24 +23,26 @@
 		\texttt{13-505} & " & $2\times 4\,000mm$ \\
 		\texttt{13-106} & " & $2\times 4\,000mm$ \\
 		\texttt{20-058} & M8 T-nut & $14$ \\
-		\texttt{20-049} & M8 double T-nut  & $33$ \\
+		\texttt{20-049} & M8 double T-nut  & $33$$^3$ \\
 		\texttt{20-050} & M8 double T-nut  & $15$ \\
-		\texttt{24-116-8} & M8$\times$1.25 button head screw, length $16mm$ & $14$ \\
-		\texttt{24-118-8} & M8$\times$1.25 button head screw, length $18mm$ & $12$ \\
-		\texttt{24-120-8} & M8$\times$1.25 button head screw, length $20mm$ & $2$ \\
-		\texttt{24-130-8} & M8$\times$1.25 button head screw, length $30mm$ & $4$ \\
-		\texttt{24-212-8} & M8$\times$1.25 flat head screw, length $12mm$ & $4$ \\
-		\texttt{24-320-4} & M4$\times$0.8 socket head screw, length $20mm$ & $61$ \\
-		\texttt{24-330-8} & M8$\times$1.25 socket head screw, length $30mm$ & $16$ \\
+		\texttt{24-116-8} & M$8\times1.25$ button head screw, length $16mm$ & $14$ \\
+		\texttt{24-118-8} & M$8\times1.25$ button head screw, length $18mm$ & $12$ \\
+		\texttt{24-120-8} & M$8\times1.25$ button head screw, length $20mm$ & $2$ \\
+		\texttt{24-130-8} & M$8\times1.25$ button head screw, length $30mm$ & $4$ \\
+		\texttt{24-212-8} & M$8\times1.25$ flat head screw, length $12mm$ & $4$ \\
+		\texttt{24-320-4} & M$4\times0.8$ socket head screw, length $20mm$ & $61$$^3$ \\
+		\texttt{24-330-8} & M$8\times1.25$ socket head screw, length $30mm$ & $16$ \\
 		\texttt{24-708} & M8 spring washer & $28$ \\
-	\multicolumn{3}{c}{Manufacturer} \\
-			XXX & General piece & 1 \\ 
-			XXX & General piece & 1 \\ 
-			\multicolumn{3}{c}{Manufacturer} \\
-			XXX & General piece & 1 \\ 
-			XXX & General piece & 1 \\ 
-			
-			\multicolumn{2}{r}{\textbf{Total:}} & \texteuro 100.00
+		\texttt{24-708} & M8 spring washer & $28$ \\
+	\multicolumn{3}{c}{Undefined manufacturer} \\
+		\texttt{AS 1474 - M4}$^2$ & Hexagonal nut & $12$ \\ 
+		\texttt{ISO 1580 M4x12}$^2$ & Button head screw & $12$ \\ 
+		& M$8\times1.25$ male to M$4\times0.7$ female thread reducer & $54$$^3$ \\
+	\multicolumn{3}{c}{3D printed parts} \\
+			& Gear & $3$$^3$ \\ 
+			& Rack & $28$$^3$ \\ 			
+%	\multicolumn{3}{c}{Undefined manufacturer} \\
+%			\multicolumn{2}{r}{\textbf{Total:}} & \texteuro 100.00
 		\end{tabular}
 	\end{center}
 	
@@ -48,7 +50,9 @@
 	\rule{\linewidth}{1pt}
 	{
 		\scriptsize
-		\textbf{INFORMAZIONI SU DOVE SONO STATI PRESI I PREZZI}
+		$^1$: the piece need requires need to be machined in order to create the holes for inserting the socket head screws. \\
+		$^2$: this component might change depending on the final motor chosen to drive the system. \\
+		$^3$: the number might change depending on the size of the 3D printed rack; in this case it has been considered a component with $z=60$ teeth, equivalent to a $377mm$ nominal length.
 	}	
 	
 	\rule{\linewidth}{2pt}

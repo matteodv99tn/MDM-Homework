@@ -13,4 +13,27 @@
 		\item we did not consider external forces acting that might act on the global $x$ axis due to the actuation of the machine or accidental load applied by the end user: this can lead to an increase in bending and torques that might make the system fail; a high safety factor ensures us the reliability of the system also in such conditions.
 	\end{itemize}
 	
-	\textbf{AGGIUNGERE LA STIFFNESS VERIFICATION}
+	\paragraph{Stiffness verification} At this point we can also perform a stiffness verification to understand the behaviour of the mechanical system, in particular the displacement with respect to the nominal position of the turret used to perform the operation to the soil. Given the high safety factor and observing that axial load are not that relevant, we can assume the two supports as rigid bodies. At this we consider the radial displacement $v(t)$ from the nominal configuration as related only at the bending action by the law
+	\[ v(z) = - \frac{M_x}{2EI_{xx}}z^2 \]
+	
+	In our study case we have that $M_x$ depends on the point of application of the external force $F$ that's function of $\zeta$, the position of the turret itself (so our point of interest). This allows us to plot the vertical displacement of the turret as function of the position of the turret as in figure \ref{fig:displacement}. 
+	\begin{figure}[tb]
+		\centering \includegraphics[width=0.7\linewidth]{displacement}
+		\caption{vertical displacement of the turret from the nominal configuration.} \label{fig:displacement}
+	\end{figure}
+
+	The reported graph contradicts a requirement of our customer as the maximum displacements is bigger than $4cm$, exceeding the minimum target displacement value of $1cm$. This suggest that the chosen profile \texttt{10-040} is not able to withstand all the requirements. In order to avoid this problem two ways can be followed:
+	\begin{itemize}
+		\item use the mathematical model of the machine in the control system to compensate for such displacement;
+		\item use a different profile with better response at deflection. Looking at the IPS catalogue, a suitable alternative is the \texttt{10-080} profile whose section is reported in figure \ref{fig:10-080}. Such beam is characterized by a moment of inertia $I_{xx} = 71.56cm^4$: neglecting the difference in weight contribution of the bar (whose density is increased to $\rho = 3.18kg/m$),  the maximum displacement is reduced to less then $6mm$, fully satisfying the customers requirement.
+	\end{itemize}
+	\begin{SCfigure}[3][bht]
+		\centering
+		\includegraphics[width=2.2cm]{10-080}
+		\caption{section of the \texttt{10-080} T-slot profile by Parker IPS\cite{parker-ds}.}
+		\label{fig:10-080}
+	\end{SCfigure}
+	
+	In the following (and also in the final CAD) the solution based on the \texttt{10-040} profile is reported, however, due to the high \textit{modularity} provided by the T-slot profiles, assembling the machine with the \texttt{10-080} component will be practically the same.
+	
+	

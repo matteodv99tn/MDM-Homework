@@ -8,9 +8,9 @@
 
 	By talking with the association that worked (and is still improving) on the product we acknowledged the following requirements (mainly related to the functionality of the product) that the machine has to satisfy:
 	\begin{enumerate}[i)]
-		\item the arm appendix must suits an interface that allows to have an interchangeable set of tools (like the one use to plow the terrain);
+		\item the arm appendix must suits an interface that allows to have an interchangeable set of tools (like the one used to plow the terrain or plant the seeds);
 		
-		\item the arm appendix should accommodate a small pipe in order to irrigate the vegetables; in particular this has to be connected to an external reservoir (with no dimension specified if it's position is fixed) or by using an internal reservoir on the moving structure of at least $4l$ (that can periodically be refilled) if it's not possible to directly attach the arm to the main reservoir;
+		\item the arm appendix should accommodate a small pipe in order to irrigate the vegetables; in particular this has to be connected to an external reservoir (with arbitrary dimension) or by using an internal reservoir on the moving structure of at least $4l$ (that can periodically be refilled by means of a resting station) if it's not possible to directly attach the arm to the main reservoir;
 		
 		\item the minimum accepted working area of the robot is a rectangle of dimension $4m\times 3m$; the robot should be design keeping in mind the possibility to increase the working area by expanding it over one edge (for example having the possibility to work on a $8m\times 3m$ terrain);
 		
@@ -23,15 +23,15 @@
 
 	\paragraph{Loads and operating conditions} The structure should be able to perform all it's operation while being safe and fully functional. For the design and the verification of the structure the loads related to wind can be neglected due to the presence of an anemometer that's mounted on the robot that's ensuring that the robot works only on a sufficiently safe environment.
 	
-	The heavier operation performed by the robot is the extirpation that's done by plowing the soil with a rotating disk attached to a motor that uses three nails to move the terrain in the nearby of the target zone. In the current state the mounted motor that performs this operation exerts a torque $T_\textrm{plower} = 0.8 N\cdot m$ and it's consider as the value that will be used for our dimensioning and verification phases.
+	The heavier operation performed by the robot is the extirpation that's done by plowing the soil with a rotating disk attached to a motor that uses three nails to move the terrain in the nearby of the target zone. In the current state the mounted motor that performs this operation exerts a torque $T_\textrm{plower} = 0.8 N\cdot m$, value that will be used for the dimensioning and verification phases.
 
 	
 	\subsection{Requirements \& specifications}
-		With this promise being said, it's possible to express the main requirements, associated to the aim dictated by our customer and our design rules, and the specifications of the designed machine. All this information, collected in table \ref{tab:requirementsspecifications}, has to be considered in each step of the design phase in order to develop the mechanical solution.
+		With this premise being said, it's possible to express the main requirements, associated to the aim dictated by our customer and our design rules, and the specifications of the designed machine. All this information, collected in table \ref{tab:requirementsspecifications}, must be considered in each step of the design phase in order to develop the mechanical solution.
 		
 		\input{Tables/requirements-specifications.tex}
 		
-		While developing the project other factors should be kept in mind:
+		While developing the project other factors should be kept in mind such:
 		\begin{itemize}
 			\item the possibility to pack all the necessary components in a \textit{small} transportation box (the box shouldn't present and edge greater than $2m$, maximum sum of all the edges less then $3m$) in order to avoid shipping issues;
 			

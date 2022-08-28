@@ -7,7 +7,7 @@
 		\label{fig:freebodydiagramframe}
 	\end{figure}
 	
-	The design involves a main elevated track (body 2) supported by two vertical supporting beams (bodies 1 and 3); the connection between body 1 and 2 is constituted by a full joint in point $B$ constraining all 6 degrees of freedom while the connection of the track with the other support is done by a hinge that leaves free the rotation over the global $x$ axis. The two vertical supports can slide on two parallel tracks and the associated prismatic joints constraints respectively 5 and 4 degrees of freedom in $A$ and $D$, leaving the system free to slide along the $x$ global axis; the choice of leaving also $D$ in as free to rotate aims at reducing redundant constraints, with the aim of reducing hyperstatic variables with a design that accommodates misalignments in the position of the two parallel tracks placed at ground.
+	The design involves a main elevated track (body 2) supported by two vertical supporting beams (bodies 1 and 3); the connection between body 1 and 2 is constituted by a full joint in point $B$ constraining all 6 degrees of freedom while the connection of the track with the other support is done by a hinge that leaves free the rotation over the global $x$ axis. The two vertical supports can slide on two parallel tracks and the associated prismatic joints constraints respectively 5 and 4 degrees of freedom in $A$ and $D$, leaving the system free to slide along the $x$ global axis; the choice of leaving also $D$ in as free to rotate aims at reducing redundant constraints, reducing hyperstatic variables with a design that accommodates misalignments in the position of the two parallel tracks placed at ground.
 	
 	
 	\begin{figure}[p]
@@ -36,7 +36,7 @@
 	\[ R_{Az} = \frac{F (L-\zeta) - X_3}{L} \qquad R_{Cz} = R_{Dz} =\frac{F\zeta + X_3}{L} \] \[ M_{Ay} = M_{Cy} = X_2 \qquad M_{Cz} = M_{Dz} = T-X_1 \]
 	Non mentioned actions are identically zero. To solve the hyper-static problem the Castigliano's theorem has been used, computing the elastic energy $U_e$ of the structure neglecting shear loads:
 	\[ U_e = \sum_{i=1}^3 \int_0 ^{l_i}  \left( \frac{N_i^2}{2EA_i} + \frac{M_{x,i}^2}{2 EI_{xx,i}} + \frac{M_{y,i}^2}{2 E I_{yy,i}} + \frac{M_{z,i}^2}{2G J_{t,i}}  \right)\, dz \]
-	Assuming the generalized displacement related to the hyper-static variables is zero, solving the equations $\partial U_e / \partial X_1 = 0$ and $\partial U_e/\partial X_2$, the solution that we achieve is still depending on the geometrical parameters of the sections that are still unknown. To simplify the calculations, assuming that $A_1$ gives
+	Assuming the generalized displacement related to the hyper-static variables is zero, solving the equations $\partial U_e / \partial X_i = 0$, the solution that we achieve is still depending on the geometrical parameters of the sections that are still unknown. To simplify the calculations we assumed $A_1 = 0$, giving the result
 	\[ X_1 = T \qquad X_2 = 0 \qquad X_3 = F \frac{L-2\zeta}{2} \]
 	
 	
@@ -48,7 +48,7 @@
 	
 	\input{Table/beamchoice.tex}
 	
-	After an iterative process, table \ref{tab:beamchoice} shows the sections drawing and associated geometric properties of the chosen components for both elevated track and supporting beams. This choice determines a safety factor $\phi = 3.8$ for the whole structure that's a safe value for us; it is true that we neglected both shear and torque loads, and in practical applications other external and unexpected actions might act on the frame, however it is also true that the geometric simplification $A_1$ in the solution of the hyperstatic problem heavily reduced the ability of the system to bear load (as we will see in the static verification).
+	After an iterative process, table \ref{tab:beamchoice} shows the sections drawing and associated geometric properties of the chosen components for both elevated track and supporting beams. This choice determines a safety factor $\phi = 3.8$ for the whole structure that's a safe value for us; it is true that we neglected both shear and torque loads, and in practical applications other external and unexpected actions might act on the frame, however it is also true that the geometric simplification $A_1 = 0$ in the solution of the hyperstatic problem heavily reduced the ability of the system to bear load (as we will see in the final static verification).
 	
 	As a side note, our design was forced to use the $40mm$ T-slot series (even if a $30mm$ profile would have let us achieve similar results with lower weights and costs) as it's the only one that disposes off-the-shelf linear roller system that can be easily mounted and used (choosing other profile series would have ended in custom solution that's undesired by the product design specifications).
 	

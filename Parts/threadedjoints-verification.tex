@@ -43,20 +43,20 @@ Given the geometry of the component, the threaded joints are positioned on the v
 \end{SCfigure}
 
 \paragraph{Threaded joints along the $x$ axis} The loads acting on section A the $x$ axis are represented in figure \ref{fig:sectionxA}.\\
-\begin{figure}[bth]
+\begin{figure}[h!]
     \centering
     \begin{subfigure}{0.32\linewidth}
-    	\centering \includegraphics[width=4.5cm]{xyA_assex} 
-	\end{subfigure}
+    	\centering \includegraphics[width=6cm]{xyA_assex} 
+	\end{subfigure}\\
 	\begin{subfigure}{0.32\linewidth}
-		\centering \includegraphics[width=4.5cm]{xzA_assex}
-	\end{subfigure}
+		\centering \includegraphics[width=6cm]{xzA_assex}
+	\end{subfigure}\\
 	\begin{subfigure}{0.32\linewidth}
-		\centering \includegraphics[width=2cm]{yzA_assex} 
+		\centering \includegraphics[width=3cm]{yzA_assex} 
 	\end{subfigure}    
     \caption{Loads on section A, along the $x$ axis.}
     \label{fig:sectionxA}
-\end{figure}
+\end{figure}\\
 The sliding actions are given by the torque $M_{zA}$, which produces a shear force on every screw equal to:\\
 \begin{equation*}
     V_{i} = \frac{M_{z1}r_{i}}{\sum\limits_{i=1}^{n_{{b}}} r^2_{i}}
@@ -214,7 +214,7 @@ In correspondence of section $D$, there is a pivot joint chosen from the Parker 
 	\end{subfigure}    
     \caption{pivot joint, code \texttt{23-010}, from the IPS catalogue \cite{parker-ds}. In the drawing: $A = 40mm$, $B=30mm$, $C=9mm$, $D=40mm$, $E=8.5mm$, $F=60mm$.}
     \label{fig:pivot}
-\end{figure}
+\end{figure}\\
 The loads action on section D are reported in figure \ref{fig:loadsD}
 \begin{SCfigure}[1.5][h!]
 	\centering
@@ -223,7 +223,7 @@ The loads action on section D are reported in figure \ref{fig:loadsD}
 	\label{fig:loadsD}
 \end{SCfigure}
 
-In this case, the sliding actions are given by the torque $M_{zD}$,  figure \ref{fig:pivot}\textit{(b)}. However, since there is a single screw positioned in the center of the section, they do not cause any shear on the screw. \textbf{(??)}
+In this case, the sliding actions are given by the torque $M_{zD}$,  figure \ref{fig:pivot}\textit{(b)}. However, since there is a single screw positioned in the center of the section, they do not cause any shear on the screw.
 
 Separating actions are given by the axial load and the bending moments. Assuming that the members are rigid it is possible to calculate the effects of the separating actions in both $xz$ and $yz$ planes. The load caused by the separating action, acting on the screw can be calculated as:
 \begin{equation*}
@@ -268,10 +268,10 @@ thus:
         N_{yz} < \frac{\pi d_{0} t \sigma_{uts,m}}{\phi} \qquad \Rightarrow \qquad   \sigma_{uts,m} > \frac{N_{yz}\phi}{\pi d_{0}t} = 0.23 MPa
     \end{equation*}
 \end{itemize}
-In conclusion, the bolt ultimate strength must be greater than $24.22 MPa$, a value that allows to choose any bolt property class. In order to minimize the costs, property 4.6 is chosen.\textbf{(????)} 
+In conclusion, the bolt ultimate strength must be greater than $24.22 MPa$, a value that allows to choose any bolt property class. In order to minimize the costs, property 4.6 is chosen.
 
 Moreover, the verifications for crushing and punching provide the minimum member ultimate strength, $\sigma_{uts,m} > 0.23 MPa$, value much smaller than the chosen member's UTS.
 
 Note that for the verifications of the separating actions the rigid member approach was used, which is usually more conservative than the others. However, since the values obtained are far distant from the one of the selected materials, there is no need of a more precise verification.
 
-As for most applications, the preload used to tighten the bolts is chosen to be 80$\%$ of the yield strength. At this point, the tensile joint verification should be performed. However, due to the low external loads acting on the bolts, no issue will arise and there is no need to carry out this analysis. 
+As for most applications, the preload used to tighten the bolts is chosen to be 80$\%$ of the yield strength. At this point, the stiffness joint verification should be performed. However, due to the low external loads acting on the bolts, no issue will arise and there is no need to carry out this analysis. 
